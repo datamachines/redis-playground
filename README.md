@@ -6,7 +6,7 @@ this example show how to use redis streaming with consumer group, and redis pubs
 
 ### Requirements
 
-* Python 3.6+
+* Python 3.5.2+
 * Redis 5.0 (latest stable version)
 * use https://github.com/aio-libs/aioredis
 
@@ -14,11 +14,11 @@ this example show how to use redis streaming with consumer group, and redis pubs
 ### Installation
 
 * Clone the repo
-* install requirements with `pip install -r requirements.txt`
+* install requirements with `pip3 install -r requirements.txt`
 
-redis Stream:
-* To procude data `python3 producer.py`
-* To start a consumer `python consumer.py <consumer_name>`
+redis Stream, requires Redis 5, released Oct 17 2018
+* To produce data `python3 producer.py`
+* To start a consumer `python3 consumer.py <consumer_name>`
 
 redis PubSub:
  * To produce data: `python3  pubsub/publisher.py`
@@ -43,7 +43,7 @@ start 4 consumers will load balanced all consumers in the consumer group.
 	processing [(b'temperature', b'1540231227467-0', OrderedDict([(b'id', b'426'), (b'temperature', b'22'), (b'humidity', b'15')]))]
 	processing [(b'temperature', b'1540231227664-0', OrderedDict([(b'id', b'430'),
 
-### subpub test output
+### pubsub test output
 	  starting 4 consumers, all consumers are notified of all messages.
 	  recieve message...
 	 data:  b"{'id': 401, 'temperature': b'25', 'humidity': b'13'}" from Channel: b'temperature' 
@@ -56,7 +56,11 @@ start 4 consumers will load balanced all consumers in the consumer group.
 	recieve message...
 	 data:  b"{'id': 405, 'temperature': b'23', 'humidity': b'11'}" from Channel: b'temperature' 
 
-   
+
+### references:
+   https://redis.io/topics/streams-intro
+   https://redis.io/topics/pubsub
+       
 ##
 ### License
 
