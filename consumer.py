@@ -16,13 +16,13 @@ async def process_message(redis, loop, group, consumer, streams):
         result = await redis.xread_group(group, consumer, streams, count=1, latest_ids=['>'])
         if result:
             records += 1
-            print(f"processing {result}")
+            print("processing %s" % result)
             #time.sleep(1)
         else:
             print("Timeout")
             break
     end = time.time()
-    print(f"Reading {records} records took {end - start} seconds")
+    print("Reading %d records took %d seconds" %(records, end-start))
 
 async def main(consumer):
     
