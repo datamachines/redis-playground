@@ -89,7 +89,9 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-
+.pyproject
+.project
+.pydevproject
 # Spyder project settings
 .spyderproject
 .spyproject

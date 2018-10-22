@@ -1,0 +1,3 @@
+redis_host: "10.114.1.156"
+redis_topic: "temperature"
+redis_port: 6379

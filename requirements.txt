@@ -1,0 +1,5 @@
+redis
+#git+git://github.com/aio-libs/aioredis.git@ea948d0#egg=aioredis
+aioredis
+uvloop==0.11.2
+pyyaml
