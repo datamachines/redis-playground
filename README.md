@@ -58,7 +58,7 @@ start 4 consumers will load balanced all consumers in the consumer group.
 
 
 ### references:
-   https://redis.io/topics/streams-intro
+   https://redis.io/topics/streams-intro  
    https://redis.io/topics/pubsub
        
 ##
