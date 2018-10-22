@@ -21,7 +21,7 @@ async def add_message_with_sleep(redis, loop, stream):
                   'humidity': humidity.encode('utf-8')}
         await redis.xadd(stream, fields)
     end = time.time()
-    print(f"Inserting {RECORDS} records took {end - start} seconds")
+    print("Inserting %s records took %d seconds"% (RECORDS, end-start))
 
 async def main():
     stream = open('config.yaml', 'r')    
